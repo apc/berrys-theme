@@ -104,7 +104,7 @@
    `(link ((,class (:underline t))))
    `(link-visited ((,class (:underline t))))
    `(match ((,class (:inherit isearch))))
-   ;; `(vertical-border ((,class (:background ,berrys04))))
+   `(vertical-border ((,class (:background ,berrys03 :foreground ,berrys03))))
 
    `(message-cited-text ((,class (:inherit font-lock-comment-face))))
    `(message-header-cc ((,class (:foreground ,berrys-string))))
