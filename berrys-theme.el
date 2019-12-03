@@ -262,6 +262,7 @@
    `(font-latex-sectioning-4-face ((,class (:inherit font-latex-sectioning-0-face))))
    `(font-latex-sectioning-5-face ((,class (:inherit font-latex-sectioning-0-face))))
    `(font-latex-sedate-face ((,class (:foreground ,berrys11))))
+   `(font-latex-italic-face ((,class (:inherit default :slant italic))))
 
    ;; => Markdown
    `(markdown-code-face ((,class (:family unspecified))))
