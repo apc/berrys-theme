@@ -21,23 +21,25 @@
 
 ;;;; Colors
 (let* ((class '((class color) (min-colors 89)))
-       (berrys00       nil)
+       (berrys00       "#FEFEFE")
 
        (berrys01       "#FAFAFA")
-       (berrys02       "#2C302E")
-       (berrys03       "#646881")
-       (berrys04       "#E2E3E8")
+       (berrys02       "#6D6D6D")
+       (berrys03       "#C7C4C2")
+       (berrys04       "#E9EAEE")
 
-       (berrys05       "#1098F7")
-       (berrys06       "#B2EAFF")
+       (berrys05       "#1098F7") ; darker blue
+       (berrys06       "#B2EAFF") ; lighter blue
 
-       (berrys07       nil)
+       (berrys07       "#1A1A1A")
 
-       (berrys08       "#00AC00")
+       (berrys08       "#00AC00") ; bright green
 
-       (berrys09       "#D89800")
+       (berrys09       "#D89800") ; orange
 
-       (berrys10       "#B80C09")
+       (berrys10       "#B80C09") ; red
+
+       (berrys11       "#8B4513") ; SaddleBrown
 
        (berrys-cursor  berrys05)
        (berrys-comment berrys03)
@@ -57,23 +59,25 @@
    `(default ((,class (:foreground ,berrys02 :background ,berrys01))))
    `(error ((,class (:foreground ,berrys-error))))
    `(fixed-pitch-serif ((,class (:family unspecified))))
-   `(font-lock-builtin-face ((,class (:foreground ,berrys02 :weight bold))))
+   `(font-lock-builtin-face ((,class (:foreground ,berrys07 :weight normal))))
    `(font-lock-comment-face ((,class (:foreground ,berrys-comment :slant italic))))
    `(font-lock-comment-delimiter-face ((,class (:foreground ,berrys-comment :slant italic))))
-   `(font-lock-constant-face ((,class (:foreground ,berrys02 :weight bold))))
+   `(font-lock-constant-face ((,class (:foreground ,berrys07 :weight normal))))
    `(font-lock-doc-face ((,class (:inherit (font-lock-comment-face)))))
-   `(font-lock-function-name-face ((,class (:foreground ,berrys02 :weight bold))))
-   `(font-lock-keyword-face ((,class (:foreground ,berrys02 :weight bold))))
+   `(font-lock-function-name-face ((,class (:foreground ,berrys07 :weight normal))))
+   `(font-lock-keyword-face ((,class (:foreground ,berrys07 :weight normal))))
    `(font-lock-string-face ((,class (:foreground ,berrys-string))))
-   `(font-lock-type-face ((,class (:foreground ,berrys02 :slant italic))))
+   `(font-lock-type-face ((,class (:foreground ,berrys07))))
    `(font-lock-variable-name-face ((,class (:foreground ,berrys02))))
    `(font-lock-warning-face ((,class (:inherit warning))))
+   `(fringe ((,class (:inherit default))))
    `(shadow ((,class (:foreground ,berrys03))))
    `(warning ((,class (:foreground ,berrys-warning))))
 
    ;; => Core UI
    `(cursor ((,class (:background ,berrys-cursor :inverse-video t))))
    `(custom-button ((,class (:background ,berrys05 :foreground ,berrys01))))
+   `(custom-group-tag ((,class (:foreground ,berrys05 :weight bold))))
    `(custom-variable-tag ((,class (:foreground ,berrys02 :weight bold))))
    `(custom-visibility ((,class (:inherit link))))
    `(diff-added ((,class (:foreground ,berrys08))))
@@ -89,7 +93,7 @@
    `(dired-directory ((,class :foreground ,berrys02 :weight bold)))
    `(header-line ((,class :foreground ,berrys02 :weight bold)))
    `(highlight ((,class (:background ,berrys04))))
-   `(hl-line ((,class (:background ,berrys04))))
+   `(hl-line ((,class (:background ,berrys00))))
    `(info-node ((,class (:foreground ,berrys05 :weight bold))))
    `(info-menu-header ((,class (:foreground ,berrys02 :weight bold))))
    `(info-menu-star ((,class (:foreground ,berrys05))))
@@ -100,6 +104,7 @@
    `(link ((,class (:underline t))))
    `(link-visited ((,class (:underline t))))
    `(match ((,class (:inherit isearch))))
+   ;; `(vertical-border ((,class (:background ,berrys04))))
 
    `(message-cited-text ((,class (:inherit font-lock-comment-face))))
    `(message-header-cc ((,class (:foreground ,berrys-string))))
@@ -112,11 +117,11 @@
    `(message-mml ((,class (:foreground ,berrys-string))))
    `(message-separator ((,class (:inherit font-lock-comment-face))))
 
-   `(minibuffer-prompt ((,class (:foreground ,berrys02 :weight bold))))
+   `(minibuffer-prompt ((,class (:foreground ,berrys07 :weight bold))))
    `(mode-line ((,class (:foreground ,berrys02 :background ,berrys04))))
-   `(mode-line-buffer-id ((,class (:weight bold))))
+   `(mode-line-buffer-id ((,class (:foreground ,berrys07))))
    `(mode-line-highlight ((,class (:inherit highlight))))
-   `(mode-line-inactive ((,class (:foreground ,berrys02 :background ,berrys01 :box (:color ,berrys04)))))
+   `(mode-line-inactive ((,class (:foreground ,berrys02 :background ,berrys00 ))))
    `(outline-1 ((,class (:foreground ,berrys02 :weight bold))))
    `(outline-2 ((,class (:inherit outline-1))))
    `(outline-3 ((,class (:inherit outline-1))))
@@ -127,7 +132,7 @@
    `(outline-8 ((,class (:inherit outline-1))))
    `(region ((,class (:background ,berrys06))))
    `(secondary-selection ((,class (:background ,berrys04 :foreground ,berrys02))))
-   `(show-paren-match ((,class (:weight bold))))
+   `(show-paren-match ((,class (:weight bold :foreground ,berrys05))))
    `(show-paren-mismatch ((,class (:foreground ,berrys-error :weight bold))))
    `(success ((,class (:foreground ,berrys08))))
    `(whitespace-big-indent ((,class (:foreground ,berrys01 :background ,berrys10))))
@@ -225,7 +230,7 @@
    `(helm-resume-need-update ((,class (:foreground ,berrys01 :background ,berrys10))))
    `(helm-selection ((,class (:inherit highlight))))
    `(helm-selection-line ((,class (:inherit highlight))))
-   `(helm-source-header ((,class (:foreground ,berrys02 :weight bold :height 1.2))))
+   `(helm-source-header ((,class (:foreground ,berrys02 :weight bold :height 1.0))))
    `(helm-separator ((,class (:foreground ,berrys02))))
    `(helm-visible-mark ((,class (:background ,berrys06))))
    `(helm-yas-key ((,class (:inherit helm-M-x-key))))
@@ -241,21 +246,30 @@
 
    ;; => Ivy
    `(ivy-confirm-face ((,class (:foreground ,berrys08 :weight bold))))
-   `(ivy-current-match ((,class (:inherit hl-line))))
+   `(ivy-current-match ((,class (:inherit highlight))))
    `(ivy-cursor ((,class (:foreground ,berrys01 :background ,berrys02))))
    `(ivy-match-required-face ((,class (:foreground ,berrys10 :weight bold))))
    `(ivy-remote ((,class (:foreground ,berrys02 :underline t))))
    `(ivy-minibuffer-match-face-2 ((,class (:foreground ,berrys05 :weight bold))))
    `(ivy-minibuffer-match-face-3 ((,class (:inherit ivy-minibuffer-match-face-2 :underline t))))
-   `(ivy-minibuffer-match-face-4 ((,class (:inherit ivy-minibuffer-match-face-2 :box (:color ,berrys05)))))
+   `(ivy-minibuffer-match-face-4 ((,class (:inherit ivy-minibuffer-match-face-2 :box nil))))
+
+   ;; => LaTeX
+   `(font-latex-sectioning-0-face ((,class (:inherit default))))
+   `(font-latex-sectioning-1-face ((,class (:inherit font-latex-sectioning-0-face))))
+   `(font-latex-sectioning-2-face ((,class (:inherit font-latex-sectioning-0-face))))
+   `(font-latex-sectioning-3-face ((,class (:inherit font-latex-sectioning-0-face))))
+   `(font-latex-sectioning-4-face ((,class (:inherit font-latex-sectioning-0-face))))
+   `(font-latex-sectioning-5-face ((,class (:inherit font-latex-sectioning-0-face))))
+   `(font-latex-sedate-face ((,class (:foreground ,berrys11))))
 
    ;; => Markdown
    `(markdown-code-face ((,class (:family unspecified))))
    `(markdown-header-face ((,class (:foreground ,berrys02 :weight bold))))
-   `(markdown-header-face-1 ((,class (:inherit markdown-header-face :height 1.4))))
-   `(markdown-header-face-2 ((,class (:inherit markdown-header-face :height 1.3))))
-   `(markdown-header-face-3 ((,class (:inherit markdown-header-face :height 1.2))))
-   `(markdown-header-face-4 ((,class (:inherit markdown-header-face :height 1.1))))
+   `(markdown-header-face-1 ((,class (:inherit markdown-header-face :height 1.0))))
+   `(markdown-header-face-2 ((,class (:inherit markdown-header-face :height 1.0))))
+   `(markdown-header-face-3 ((,class (:inherit markdown-header-face :height 1.0))))
+   `(markdown-header-face-4 ((,class (:inherit markdown-header-face :height 1.0))))
    `(markdown-inline-code-face ((,class (:inherit markdown-code-face))))
    `(markdown-italic-face ((,class (:inherit italic))))
 
@@ -330,16 +344,17 @@
 
    ;; => Org mode
    `(org-agenda-date ((,class (:foreground ,berrys02))))
-   `(org-agenda-diary ((,class (:foreground ,berrys-string :slant italic))))
-   `(org-agenda-dimmed-todo-face ((,class (:foreground ,berrys-comment :slant italic))))
-   `(org-agenda-done ((,class (:foreground ,berrys-string :slant italic :strike-through t))))
+   `(org-agenda-date-today ((,class (:foreground ,berrys07 :slant normal :weight bold))))
+   `(org-agenda-diary ((,class (:foreground ,berrys-string))))
+   `(org-agenda-dimmed-todo-face ((,class (:foreground ,berrys-comment))))
+   `(org-agenda-done ((,class (:foreground ,berrys-string :strike-through t))))
    `(org-agenda-restriction-lock ((,class (:background ,berrys04))))
-   `(org-agenda-structure ((,class (:foreground ,berrys02 :weight bold :height 1.2))))
+   `(org-agenda-structure ((,class (:foreground ,berrys02 :weight bold :height 1.0))))
    `(org-block ((,class (:inherit berrys02))))
    `(org-clock-overlay ((,class (:inherit secondary-selection))))
    `(org-column ((,class (:foreground ,berrys-string :slant normal))))
    `(org-column-title ((,class (:foreground ,berrys02 :weight bold))))
-   `(org-date ((,class (:foreground ,berrys02 :slant italic))))
+   `(org-date ((,class (:foreground ,berrys02))))
    `(org-date-selected ((,class (:foreground ,berrys05 :weight bold))))
    `(org-document-info ((,class (:foreground ,berrys03))))
    `(org-document-title ((,class (:foreground ,berrys03 :weight bold))))
@@ -360,18 +375,18 @@
    `(org-link ((,class (:inherit unspecified :underline t))))
    `(org-mode-line-clock ((,class (:inherit mode-line))))
    `(org-mode-line-clock-overrun ((,class (:foreground ,berrys09))))
-   `(org-priority ((,class(:inherit org-level-1 :foreground ,berrys05))))
-   `(org-scheduled ((,class (:foreground ,berrys02 :slant italic))))
-   `(org-scheduled-previously ((,class (:foreground ,berrys10 :slant italic))))
-   `(org-scheduled-today ((,class (:inherit org-scheduled))))
-   `(org-sexp-date ((,class (:foreground ,berrys-string :slant italic))))
+   `(org-priority ((,class(:inherit org-level-1 :foreground ,berrys05 :weight normal))))
+   `(org-scheduled ((,class (:foreground ,berrys02))))
+   `(org-scheduled-previously ((,class (:foreground ,berrys11))))
+   `(org-scheduled-today ((,class (:foreground ,berrys07))))
+   `(org-sexp-date ((,class (:foreground ,berrys-string))))
    `(org-special-keyword ((,class (:foreground ,berrys-string))))
    `(org-table ((,class (:foreground ,berrys02))))
-   `(org-tag ((,class(:inherit org-level-1 :foreground ,berrys05))))
-   `(org-time-grid ((,class (:foreground ,berrys-string :slant italic))))
-   `(org-todo ((,class (:inherit org-level-1 :foreground ,berrys05))))
-   `(org-upcoming-deadline ((,class (:foreground ,berrys09 :slant italic))))
-   `(org-warning ((,class (:foreground ,berrys09 :slant italic))))
+   `(org-tag ((,class(:inherit org-level-1 :foreground ,berrys07 :weight normal))))
+   `(org-time-grid ((,class (:foreground ,berrys-string))))
+   `(org-todo ((,class (:inherit org-level-1 :foreground ,berrys02))))
+   `(org-upcoming-deadline ((,class (:foreground ,berrys09))))
+   `(org-warning ((,class (:foreground ,berrys09))))
    `(org-verbatim ((,class (:inherit default))))
 
    ;; Org Pomodoro
