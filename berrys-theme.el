@@ -361,7 +361,7 @@
    `(org-date-selected ((,class (:foreground ,berrys05 :weight bold))))
    `(org-document-info ((,class (:foreground ,berrys03))))
    `(org-document-title ((,class (:foreground ,berrys03 :weight bold))))
-   `(org-done ((,class(:inherit org-level-1 :foreground ,berrys08))))
+   `(org-done ((,class(:inherit org-level-1 :foreground ,berrys-comment))))
    `(org-ellipsis ((,class (:inherit unspecified))))
    `(org-footnote ((,class (:foreground ,berrys02 :underline t))))
    `(org-formula ((,class (:foreground ,berrys-string))))
