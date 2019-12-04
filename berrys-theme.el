@@ -121,7 +121,7 @@
    `(mode-line ((,class (:foreground ,berrys02 :background ,berrys04))))
    `(mode-line-buffer-id ((,class (:foreground ,berrys07))))
    `(mode-line-highlight ((,class (:inherit highlight))))
-   `(mode-line-inactive ((,class (:foreground ,berrys02 :background ,berrys00 ))))
+   `(mode-line-inactive ((,class (:foreground ,berrys03 :background ,berrys01 ))))
    `(outline-1 ((,class (:foreground ,berrys02 :weight bold))))
    `(outline-2 ((,class (:inherit outline-1))))
    `(outline-3 ((,class (:inherit outline-1))))
