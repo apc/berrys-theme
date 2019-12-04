@@ -104,7 +104,7 @@
    `(link ((,class (:underline t))))
    `(link-visited ((,class (:underline t))))
    `(match ((,class (:inherit isearch))))
-   `(vertical-border ((,class (:background ,berrys03 :foreground ,berrys03))))
+   `(vertical-border ((,class (:background ,berrys04 :foreground ,berrys04))))
 
    `(message-cited-text ((,class (:inherit font-lock-comment-face))))
    `(message-header-cc ((,class (:foreground ,berrys-string))))
@@ -118,10 +118,10 @@
    `(message-separator ((,class (:inherit font-lock-comment-face))))
 
    `(minibuffer-prompt ((,class (:foreground ,berrys07 :weight bold))))
-   `(mode-line ((,class (:foreground ,berrys02 :background ,berrys04))))
+   `(mode-line ((,class (:foreground ,berrys02 :background ,berrys04 :box ,berrys04))))
    `(mode-line-buffer-id ((,class (:foreground ,berrys07))))
    `(mode-line-highlight ((,class (:inherit highlight))))
-   `(mode-line-inactive ((,class (:foreground ,berrys03 :background ,berrys01 ))))
+   `(mode-line-inactive ((,class (:foreground ,berrys03 :background ,berrys01 :box ,berrys04 ))))
    `(outline-1 ((,class (:foreground ,berrys02 :weight bold))))
    `(outline-2 ((,class (:inherit outline-1))))
    `(outline-3 ((,class (:inherit outline-1))))
