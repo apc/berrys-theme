@@ -35,11 +35,13 @@
 
        (berrys08       "#00AC00") ; bright green
 
-       (berrys09       "#D89800") ; orange
+       (berrys09       "#B17D00") ; orange
 
        (berrys10       "#B80C09") ; red
 
        (berrys11       "#8B4513") ; SaddleBrown
+
+       (berrys12        "#A3A19F") ; lighter dark grey
 
        (berrys-cursor  berrys05)
        (berrys-comment berrys03)
@@ -261,7 +263,7 @@
    `(font-latex-sectioning-3-face ((,class (:inherit font-latex-sectioning-0-face))))
    `(font-latex-sectioning-4-face ((,class (:inherit font-latex-sectioning-0-face))))
    `(font-latex-sectioning-5-face ((,class (:inherit font-latex-sectioning-0-face))))
-   `(font-latex-sedate-face ((,class (:foreground ,berrys11 :weight bold))))
+   `(font-latex-sedate-face ((,class (:foreground ,berrys12 :weight bold))))
    `(font-latex-italic-face ((,class (:inherit default :slant italic))))
 
    ;; => Markdown
@@ -378,7 +380,7 @@
    `(org-mode-line-clock-overrun ((,class (:foreground ,berrys09))))
    `(org-priority ((,class(:inherit org-level-1 :foreground ,berrys05 :weight normal))))
    `(org-scheduled ((,class (:foreground ,berrys02))))
-   `(org-scheduled-previously ((,class (:foreground ,berrys11))))
+   `(org-scheduled-previously ((,class (:foreground ,berrys-warning))))
    `(org-scheduled-today ((,class (:foreground ,berrys07))))
    `(org-sexp-date ((,class (:foreground ,berrys-string))))
    `(org-special-keyword ((,class (:foreground ,berrys-string))))
