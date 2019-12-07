@@ -24,14 +24,14 @@
        (berrys00       "#FEFEFE")
 
        (berrys01       "#FAFAFA")
-       (berrys02       "#6D6D6D")
+       (berrys02       "#1A1A1A") ; Alternative: #6D6D6D
        (berrys03       "#C7C4C2")
        (berrys04       "#E9EAEE")
 
        (berrys05       "#1098F7") ; darker blue
        (berrys06       "#B2EAFF") ; lighter blue
 
-       (berrys07       "#1A1A1A")
+       (berrys07       "#000000") ; Alternative: 1A1A1A
 
        (berrys08       "#00AC00") ; bright green
 
@@ -41,7 +41,7 @@
 
        (berrys11       "#8B4513") ; SaddleBrown
 
-       (berrys12        "#A3A19F") ; lighter dark grey
+       (berrys12        "#6D6D6D") ; lighter dark grey (Alternative: #A3A19F)
 
        (berrys-cursor  berrys05)
        (berrys-comment berrys03)
