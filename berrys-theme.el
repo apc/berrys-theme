@@ -265,6 +265,14 @@
    `(font-latex-sectioning-5-face ((,class (:inherit font-latex-sectioning-0-face))))
    `(font-latex-sedate-face ((,class (:foreground ,berrys12 :weight bold))))
    `(font-latex-italic-face ((,class (:inherit default :slant italic))))
+   `(font-latex-math-face ((,class (:foreground ,berrys11))))
+   `(font-latex-script-char-face ((,class (:foreground ,berrys11))))
+   `(font-latex-string-face ((,class (:inherit font-lock-string-face))))
+   `(font-latex-warning-face ((,class (:inherit font-lock-warning-face))))
+   `(font-latex-verbatim-face ((,class (:inherit default :weight bold))))
+   `(TeX-error-description-error ((,class :inherit error :weight bold)))
+   `(TeX-error-description-warning ((,class :inherit warning :weight bold)))
+   `(TeX-error-description-said ((,class :inherit success :weight bold)))
 
    ;; => Markdown
    `(markdown-code-face ((,class (:family unspecified))))
