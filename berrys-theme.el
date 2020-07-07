@@ -316,6 +316,7 @@
    `(magit-log-author ((,class (:foreground ,berrys02))))
    `(magit-log-date ((,class (:foreground ,berrys-comment))))
    `(magit-log-graph ((,class (:foreground ,berrys-comment))))
+   `(magit-mode-line-process ((,class (:background unspecified))))
    `(magit-hash ((,class (:foreground ,berrys-comment))))
    `(magit-header-line ((,class (:foreground ,berrys-string))))
    `(magit-header-line-log-select ((,class (:foreground ,berrys02))))
