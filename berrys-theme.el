@@ -377,6 +377,7 @@
    `(org-footnote ((,class (:foreground ,berrys02 :underline t))))
    `(org-formula ((,class (:foreground ,berrys-string))))
    `(org-headline-done ((,class (:inherit org-level-1 :strike-through t))))
+   `(org-hide ((,class (:foreground ,berrys01))))
    `(org-latex-and-related ((,class (:foreground ,berrys-string))))
    `(org-level-1 ((,class (:foreground ,berrys02 :weight bold))))
    `(org-level-2 ((,class (:inherit org-level-1 :weight normal))))
