@@ -1,8 +1,8 @@
-;;; berrys-theme.el --- A light, clean and elegant theme -*- lexical-binding: t; -*-
+;;; berrys-dark-theme.el --- A light, clean and elegant theme -*- lexical-binding: t; -*-
 
 ;; Copyright © 2019-present Slava Buzin
 
-;; Title: Berrys Theme
+;; Title: Berrys Theme, Dark
 ;; Project: berrys-theme
 ;; Version: 0.1.0
 ;; URL: https://github.com/vbuzin/berrys-theme
@@ -17,21 +17,21 @@
 
 ;;; Code:
 
-(deftheme berrys "A light, clean and elegant theme")
+(deftheme berrys-dark "A light, clean and elegant theme")
 
 ;;;; Colors
 (let* ((class '((class color) (min-colors 89)))
        (berrys00       "#FEFEFE")
 
-       (berrys01       "#FAFAFA")
-       (berrys02       "#1A1A1A") ; Alternative: #6D6D6D
-       (berrys03       "#C7C4C2")
-       (berrys04       "#E9EAEE")
+       (berrys01       "#191919")
+       (berrys02       "#CCCCCC") ; Alternative: #6D6D6D
+       (berrys03       "#696969")
+       (berrys04       "#282828")
 
        (berrys05       "#1098F7") ; darker blue
-       (berrys06       "#B2EAFF") ; lighter blue
+       (berrys06       "#324e5b") ; lighter blue
 
-       (berrys07       "#000000") ; Alternative: 1A1A1A
+       (berrys07       "#FEFEFE") ; Alternative: 1A1A1A
 
        (berrys08       "#52802F") ; bright green
 
@@ -39,7 +39,7 @@
 
        (berrys10       "#B80C09") ; red
 
-       (berrys11       "#9D6722") ; SaddleBrown
+       (berrys11       "#B99558") ; SaddleBrown
 
        (berrys12        "#6D6D6D") ; lighter dark grey (Alternative: #A3A19F)
 
@@ -51,7 +51,7 @@
        (berrys-error   berrys10))
 
   (custom-theme-set-faces
-   'berrys
+   'berrys-dark
 
    ;;; Core
    ;; =============================================================================
@@ -416,12 +416,12 @@
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme 'berrys)
-(provide 'berrys-theme)
+(provide-theme 'berrys-dark)
+(provide 'berrys-dark-theme)
 
 ;; Local Variables:
 ;; no-byte-compile: t
 ;; indent-tabs-mode: nil
 ;; End:
 
-;;; berrys-theme.el ends here
+;;; berrys-dark-theme.el ends here
