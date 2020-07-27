@@ -21,27 +21,27 @@
 
 ;;;; Colors
 (let* ((class '((class color) (min-colors 89)))
-       (berrys00       "#FEFEFE")
+       (berrys00       "#FEFEFE") ; bg-hl
 
-       (berrys01       "#FAFAFA")
-       (berrys02       "#1A1A1A") ; Alternative: #6D6D6D
-       (berrys03       "#C7C4C2")
-       (berrys04       "#E9EAEE")
+       (berrys01       "#FAFAFA") ; main bg
+       (berrys02       "#1A1A1A") ; main fg
+       (berrys03       "#C7C4C2") ; comment
+       (berrys04       "#E9EAEE") ; bg-alt
 
        (berrys05       "#1098F7") ; darker blue
        (berrys06       "#B2EAFF") ; lighter blue
 
-       (berrys07       "#000000") ; Alternative: 1A1A1A
+       (berrys07       "#000000") ; fg-alt
 
-       (berrys08       "#52802F") ; bright green
+       (berrys08       "#52802F") ; green
 
        (berrys09       "#D2692B") ; orange
 
        (berrys10       "#B80C09") ; red
 
-       (berrys11       "#9D6722") ; SaddleBrown
+       (berrys11       "#9D6722") ; math
 
-       (berrys12        "#6D6D6D") ; lighter dark grey (Alternative: #A3A19F)
+       (berrys12        "#6D6D6D") ; fg-dim (Alternative: #A3A19F)
 
        (berrys-cursor  berrys05)
        (berrys-comment berrys03)
@@ -356,8 +356,9 @@
    `(mu4e-url-number-face ((,class (:foreground ,berrys05))))
 
    ;; => Org mode
-   `(org-agenda-date ((,class (:foreground ,berrys02))))
+   `(org-agenda-date ((,class (:foreground ,berrys02 :weight bold))))
    `(org-agenda-date-today ((,class (:foreground ,berrys07 :slant normal :weight bold))))
+   `(org-agenda-date-weekend ((,class (:foreground ,berrys12 :weight bold))))
    `(org-agenda-diary ((,class (:foreground ,berrys-string))))
    `(org-agenda-dimmed-todo-face ((,class (:foreground ,berrys-comment))))
    `(org-agenda-done ((,class (:foreground ,berrys-string :strike-through nil))))
