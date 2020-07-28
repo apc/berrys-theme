@@ -26,7 +26,7 @@
        (berrys01       "#1A1A1A") ; main bg
        (berrys02       "#CCCCCC") ; main fg
        (berrys03       "#696969") ; comment
-       (berrys04       "#282828") ; bg-alt
+       (berrys04       "#333333") ; bg-alt
 
        (berrys05       "#1098F7") ; darker blue
        (berrys06       "#324e5b") ; lighter blue
